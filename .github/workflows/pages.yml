@@ -20,7 +20,7 @@ jobs:
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./   # אם יש לך build output (dist), שנה לנתיב המתאים
+          path: ./   # שנה ל'./dist' או לכל תיקיית build אם יש לך שלב build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
