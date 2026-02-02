@@ -1,9 +1,9 @@
+# Quick fix — use npm install instead of npm ci
 name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -15,12 +15,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # לדוגמה: npm install
-          npm ci
+          npm install
 
       - name: Build site
         run: |
-          # לדוגמה: npm run build --output public
           npm run build
 
       - name: Upload build artifact (use v4)
